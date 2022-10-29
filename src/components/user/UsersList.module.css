@@ -16,3 +16,16 @@
   background: transparent;
   width: 5px;
 }
+.connection {
+  background: #ffd279;
+  height: fit-content;
+  padding: 1rem 2rem;
+}
+.connection h4 {
+  font-weight: 400;
+}
+.connection p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+}

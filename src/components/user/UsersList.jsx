@@ -8,6 +8,7 @@ import classes from "./UsersList.module.css";
 
 const UsersList = () => {
   const [users, setUsers] = useState([]);
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
   const [filterUsers, setFilterUsers] = useState([]);
   const userCtx = useContext(userContext);
 
@@ -23,6 +24,29 @@ const UsersList = () => {
   if (filterUsers.length > 0) {
     activeUsers = filterUsers;
   }
+
+  // const changeConnection = () => {
+  //   if (navigator.onLine) {
+  //     setIsOnline(true);
+  //   } else {
+  //     setIsOnline(false);
+  //   }
+  // };
+  console.log(isOnline);
+  useEffect(() => {
+    const userIsOnline = () => {
+      setIsOnline(true);
+    };
+    const userIsOffline = () => {
+      setIsOnline(false);
+    };
+    window.addEventListener("offline", userIsOffline);
+    window.addEventListener("online", userIsOnline);
+    return () => {
+      window.removeEventListener("offline", userIsOffline);
+      window.removeEventListener("online", userIsOnline);
+    };
+  }, []);
 
   useEffect(() => {
     const getUser = async () => {
@@ -71,6 +95,12 @@ const UsersList = () => {
   }, [userCtx.userId]);
   return (
     <>
+      {!isOnline && (
+        <div className={classes.connection}>
+          <h4>Computer not connected</h4>
+          <p>Make sure your computer has an internet connection</p>
+        </div>
+      )}
       <Search onSearch={handleSearch}></Search>
       <ul className={classes.list}>
         {activeUsers.map((user) => (
