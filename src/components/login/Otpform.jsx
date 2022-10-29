@@ -37,11 +37,21 @@ const Otpform = () => {
   }, [otpCover.current]);
   const userCtx = useContext(userContext);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (
+      otp1.length === 0 &&
+      otp2.length === 0 &&
+      otp3.length === 0 &&
+      otp4.length === 0 &&
+      otp5.length === 0 &&
+      otp6.length === 0
+    ) {
+      return;
+    }
     setIsLoading(true);
     const otp = `${otp1}${otp2}${otp3}${otp4}${otp5}${otp6}`;
-    userCtx.confirmCode(otp);
+    await userCtx.confirmCode(otp);
     setIsLoading(false);
   };
 

@@ -18,7 +18,7 @@ export const userContext = createContext({
 
 const UserContextProvider = (props) => {
   //data
-  const [codeSent, setCodeSent] = useState(true);
+  const [codeSent, setCodeSent] = useState(false);
   const [token, setToken] = useState(null);
   const [userId, setUserId] = useState(null);
   const [activeUser, setActiveUser] = useState(null);
