@@ -39,6 +39,7 @@ const UserContextProvider = (props) => {
       setCodeSent(true);
     } catch (error) {
       console.log(error);
+      alert("Unable to send otp, Please retry");
       window.location.reload();
     }
   };
@@ -98,6 +99,7 @@ const UserContextProvider = (props) => {
       localStorage.removeItem("name");
     } catch (error) {
       console.log(error);
+      alert("Something went wrong");
     }
   };
 
