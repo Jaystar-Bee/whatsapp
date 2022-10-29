@@ -1,0 +1,29 @@
+.search {
+  padding: 0.6rem 0.2rem;
+  border-bottom: 1px solid var(--medium-grey);
+  height: fit-content;
+}
+.search__cover {
+  display: flex;
+  align-items: center;
+  background: var(--light-grey);
+  border-radius: 7px;
+  width: 85%;
+  margin: 0 auto;
+}
+.search__cover img {
+  width: 1rem;
+  margin: 0.6rem 1rem;
+}
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  margin-right: 2rem;
+  padding: 0.8rem 0.2rem;
+  caret-color: var(--primary-green);
+  background: var(--light-grey);
+}
+input::-webkit-input-placeholder {
+  color: var(--dark-grey);
+}

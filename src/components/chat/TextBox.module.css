@@ -1,0 +1,43 @@
+.cover {
+  background: var(--light-grey);
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: fit-content;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.img {
+  /* height: 2rem; */
+  width: 2rem;
+}
+.input {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 0;
+  outline: none;
+  width: 100%;
+  caret-color: var(--primary-green);
+}
+.form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+.button {
+  border: 0;
+  outline: none;
+}
+.button > img {
+  width: 2rem;
+  height: 2rem;
+}
+.img,
+.button,
+.svg {
+  cursor: pointer;
+}

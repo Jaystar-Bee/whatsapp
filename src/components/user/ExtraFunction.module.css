@@ -1,0 +1,42 @@
+.cover {
+  position: absolute;
+  background: #fff;
+  top: 4rem;
+  z-index: 20;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  height: fit-content;
+  min-width: 15rem;
+  right: 5px;
+  overflow: hidden;
+
+  text-align: center;
+  animation: ball-out 0.1s ease-out;
+}
+@keyframes ball-out {
+  from {
+    /* width: 10px;
+    height: 10px; */
+    border-radius: 100%;
+  }
+  to {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+  }
+}
+
+.list {
+  list-style: none;
+}
+.list li:not(:last-child) {
+  border-bottom: 1px solid var(--medium-grey);
+}
+.list li {
+  padding: 1rem 1rem;
+  cursor: pointer;
+  transition: background 0.4s ease-in;
+}
+.list li:hover {
+  background: var(--light-grey);
+}

@@ -1,0 +1,63 @@
+.form {
+  width: 35rem;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.otp {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.otp input {
+  width: 2rem;
+  padding: 8px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  outline: none;
+  transition: all 0.3s ease-in;
+}
+.otp input:focus {
+  border: 2px solid var(--primary-green);
+}
+.button__cover {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+.otp__text {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  color: var(--dark-green);
+}
+.button {
+  text-align: center;
+  padding: 1rem 2rem;
+  width: 60%;
+  font-size: 0.8rem;
+  color: #fff;
+  background: var(--primary-green);
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+.form__label {
+  display: block;
+  font-weight: 600;
+}
+/* .header {
+  display: flex;
+  align-items: center;
+  /* justify-content: center;  */
+.header img {
+  height: 1.4rem;
+  filter: invert(25%) sepia(95%) saturate(1896%) hue-rotate(153deg)
+    brightness(89%) contrast(102%);
+  cursor: pointer;
+}

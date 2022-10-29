@@ -1,0 +1,15 @@
+.cover {
+  background: var(--medium-paper-color);
+  height: 90%;
+  max-height: 85%;
+  padding: 2rem 4rem;
+  overflow-y: scroll;
+  margin: 0;
+}
+.cover::-webkit-scrollbar {
+  background: transparent;
+  width: 10px;
+}
+.cover::-webkit-scrollbar-thumb {
+  background: #ccc;
+}

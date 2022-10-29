@@ -1,0 +1,36 @@
+.backdrop {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 80;
+}
+.load {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 10px;
+  backdrop-filter: blur(20px);
+  background: var(--primary-green);
+  z-index: 90;
+}
+.slide {
+  position: fixed;
+  width: 40%;
+  top: 0;
+  height: 10px;
+  backdrop-filter: blur(20px);
+  background: var(--dark-green);
+  z-index: 90;
+  animation: slide 1s ease-in-out infinite;
+}
+@keyframes slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(240%);
+  }
+}

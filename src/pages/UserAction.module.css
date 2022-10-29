@@ -1,0 +1,10 @@
+.cover {
+  background: #fff;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.user {
+  height: 100%;
+  overflow: hidden;
+}

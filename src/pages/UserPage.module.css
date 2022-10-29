@@ -1,0 +1,13 @@
+.cover {
+  display: flex;
+  height: 100%;
+}
+.user {
+  width: 30%;
+  height: 100%;
+  background: #fff;
+  border-right: 2px solid var(--medium-grey);
+}
+.chat {
+  width: 70%;
+}

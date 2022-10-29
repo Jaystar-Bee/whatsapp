@@ -1,0 +1,41 @@
+@import url("http://fonts.cdnfonts.com/css/helvetica-neue-9");
+:root {
+  --dark-green: #008069;
+  --primary-green: #00c298;
+  --light-green: #d9fdd3;
+  --dark-grey: #54656f;
+  --medium-grey: #e9edef;
+  --light-grey: #f0f2f5;
+  --medium-paper-color: #eae6df;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Helvetica 25 UltraLight", sans-serif;
+  font-family: "Helvetica 35 Thin", sans-serif;
+  font-family: "Helvetica 45 Light", sans-serif;
+  font-family: "Helvetica 55 Roman", sans-serif;
+  font-family: "Helvetica 65 Medium", sans-serif;
+  background: linear-gradient(
+    to bottom,
+    var(--primary-green) 15%,
+    var(--medium-grey) 15%,
+    var(--medium-grey) 100%
+  );
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

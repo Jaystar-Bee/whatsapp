@@ -1,0 +1,10 @@
+.main {
+  margin-top: 10rem;
+  background: var(--light-grey);
+  min-width: 900px;
+  max-width: 85vw;
+  margin: 0 auto;
+  height: 95vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-top: 1.2rem;
+}
