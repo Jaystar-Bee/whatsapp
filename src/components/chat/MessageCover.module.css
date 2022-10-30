@@ -1,8 +1,8 @@
 .cover {
   background: var(--medium-paper-color);
-  height: 90%;
-  max-height: 85%;
+  height: 94%;
   padding: 2rem 4rem;
+  padding-bottom: 7rem;
   overflow-y: scroll;
   margin: 0;
 }

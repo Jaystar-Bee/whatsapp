@@ -1,5 +1,6 @@
 //images
 import profileImg from "./../../assets/dp.jpg";
+import dpImg from "./../../assets/user.png";
 import searchImg from "./../../assets/search.png";
 import menuImg from "./../../assets/menu.png";
 
@@ -32,17 +33,22 @@ const Header = (props) => {
     };
     getUser();
   }, [userCtx.activeUser]);
+
+  const lastLogin = new Date(user?.lastLogin).toLocaleTimeString(undefined, {
+    hour: "numeric",
+    minute: "2-digit",
+  });
   return (
     <header>
       <div className={classes.user}>
         <div className={classes.picture}>
-          <img src={profileImg} alt="profile pic" />
+          <img src={user?.status ? profileImg : dpImg} alt="profile pic" />
         </div>
         <div className="user__text">
           {user && <h2 className={classes.user__name}>{user.name}</h2>}
           {user && (
             <p className={classes.user__status}>
-              {user.status ? "online" : user.lastLogin}
+              {user.status ? "online" : lastLogin}
             </p>
           )}
         </div>

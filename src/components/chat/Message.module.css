@@ -37,13 +37,13 @@
 }
 .angle__other,
 .angle__me {
-  width: 1.3rem;
+  width: 1rem;
   height: 1rem;
   border: 0;
 }
 .message__other,
 .message__me {
-  padding: 0.6rem 1.2rem;
+  padding: 0.3rem 1.2rem;
   max-width: 45%;
 }
 .time {
@@ -62,7 +62,7 @@
   gap: 4px;
 }
 .text {
-  margin-right: 1rem;
+  margin-right: 1.8rem;
 }
 .mark img {
   width: 0.8rem;

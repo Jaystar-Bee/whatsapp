@@ -1,6 +1,7 @@
 //Image
 import profileImg from "./../../assets/dp.jpg";
 import readImg from "./../../assets/read.png";
+import dpImg from "./../../assets/user.png";
 import { userContext, useEffect } from "../../store/userContext";
 
 //css
@@ -24,7 +25,7 @@ const UserDetail = (props) => {
       <div
         className={`${classes.user__picture} ${props.status && classes.online}`}
       >
-        <img src={profileImg} alt="profile" />
+        <img src={props.status ? profileImg : dpImg} alt="profile" />
       </div>
       <div className={classes.user__detail}>
         <div className={classes["user__detail-text"]}>
