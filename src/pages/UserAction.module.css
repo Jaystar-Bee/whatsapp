@@ -1,7 +1,7 @@
 .cover {
   background: #fff;
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
   transition: all 0.3s ease-in;
 }

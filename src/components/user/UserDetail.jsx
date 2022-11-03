@@ -11,7 +11,7 @@ import { useContext } from "react";
 const UserDetail = (props) => {
   const userCtx = useContext(userContext);
   const lastMessage =
-    props.lastMessage.length > 30
+    props.lastMessage?.length > 30
       ? props.lastMessage.slice(0, 30) + "..."
       : props.lastMessage;
 

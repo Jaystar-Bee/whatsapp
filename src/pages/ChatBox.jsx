@@ -60,14 +60,12 @@ function ChatBox() {
         { ...newChat, userId: "friend" }
       ),
     ]);
-    // console.log(responses);
 
-    const notSent = responses.find((response) => !response.ok);
-    if (notSent) {
-      // console.log("not sent");
-    }
-
-    // catch (error) { console.log(error) }
+    // const notSent = responses.find((response) => !response.ok);
+    // if (notSent) {
+    //   console.log("not sent");
+    //   alert("Message not sent, check your internet connection");
+    // }
   };
 
   return (

@@ -1,5 +1,5 @@
 div {
-  overflow: hidden;
+  overflow-y: hidden;
   height: 100%;
   position: relative;
 }

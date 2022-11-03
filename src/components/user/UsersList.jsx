@@ -17,7 +17,6 @@ const UsersList = () => {
     newUsers = newUsers.filter((user) =>
       user.name.toLowerCase().includes(name)
     );
-    console.log(newUsers);
     setFilterUsers(newUsers);
   };
   let activeUsers = users;
@@ -25,14 +24,6 @@ const UsersList = () => {
     activeUsers = filterUsers;
   }
 
-  // const changeConnection = () => {
-  //   if (navigator.onLine) {
-  //     setIsOnline(true);
-  //   } else {
-  //     setIsOnline(false);
-  //   }
-  // };
-  console.log(isOnline);
   useEffect(() => {
     const userIsOnline = () => {
       setIsOnline(true);

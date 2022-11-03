@@ -1,5 +1,5 @@
 import React from "react";
-import ChatBox from "./ChatBox";
+// import ChatBox from "./ChatBox";
 import ChatBoxCover from "./ChatBoxCover";
 import UserAction from "./UserAction";
 import classes from "./UserPage.module.css";

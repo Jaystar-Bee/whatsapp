@@ -97,6 +97,7 @@ const UserContextProvider = (props) => {
       setToken(token);
       setUserId(userId);
       localStorage.removeItem("name");
+      setCodeSent(false);
     } catch (error) {
       console.log(error);
       alert("Something went wrong");

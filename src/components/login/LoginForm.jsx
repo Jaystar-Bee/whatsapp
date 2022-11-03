@@ -36,7 +36,6 @@ const LoginForm = () => {
     }
     setIsLoading(true);
     initializeCaptcha();
-    console.log(userNumber);
     await userCtx.sendCode(userNumber);
     if (userName.length > 0) {
       localStorage.setItem("name", userName);
