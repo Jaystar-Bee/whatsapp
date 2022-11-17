@@ -84,12 +84,12 @@ const UserContextProvider = (props) => {
         lastSignInTime: user.metadata.lastSignInTime,
       };
       const userIsAvailable = await axios.get(
-        `https://whatsapp-jaystar-default-rtdb.firebaseio.com/users/${user.uid}.json`
+        `https://whatsapp-jaystar-default-rtdb.firebaseio.com/users/${user.uid}.json?auth=${token}`
       );
 
       if (!userIsAvailable.data) {
         await axios.post(
-          `https://whatsapp-jaystar-default-rtdb.firebaseio.com/users/${user.uid}.json`,
+          `https://whatsapp-jaystar-default-rtdb.firebaseio.com/users/${user.uid}.json?auth=${token}`,
           newUser
         );
       }

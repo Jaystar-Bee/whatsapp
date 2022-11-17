@@ -18,7 +18,7 @@ const Header = (props) => {
   useEffect(() => {
     const getUser = async () => {
       const res = await axios.get(
-        `https://whatsapp-jaystar-default-rtdb.firebaseio.com/users/${userCtx.activeUser}.json`
+        `https://whatsapp-jaystar-default-rtdb.firebaseio.com/users/${userCtx.activeUser}.json?auth=${userCtx.token}`
       );
       for (const key in res.data) {
         const user = {

@@ -17,7 +17,7 @@ function ChatBox() {
   useEffect(() => {
     const getChats = async () => {
       const chats = await axios.get(
-        `https://whatsapp-jaystar-default-rtdb.firebaseio.com/chats/${userCtx.userId}/${userCtx.activeUser}/chats.json`
+        `https://whatsapp-jaystar-default-rtdb.firebaseio.com/chats/${userCtx.userId}/${userCtx.activeUser}/chats.json?auth=${userCtx.token}`
       );
 
       let allChats = [];
@@ -52,11 +52,11 @@ function ChatBox() {
 
     const responses = await Promise.all([
       await axios.post(
-        `https://whatsapp-jaystar-default-rtdb.firebaseio.com/chats/${userCtx.userId}/${userCtx.activeUser}/chats.json`,
+        `https://whatsapp-jaystar-default-rtdb.firebaseio.com/chats/${userCtx.userId}/${userCtx.activeUser}/chats.json?auth=${userCtx.token}`,
         { ...newChat, sent: true }
       ),
       await axios.post(
-        `https://whatsapp-jaystar-default-rtdb.firebaseio.com/chats/${userCtx.activeUser}/${userCtx.userId}/chats.json`,
+        `https://whatsapp-jaystar-default-rtdb.firebaseio.com/chats/${userCtx.activeUser}/${userCtx.userId}/chats.json?auth=${userCtx.token}`,
         { ...newChat, userId: "friend" }
       ),
     ]);
