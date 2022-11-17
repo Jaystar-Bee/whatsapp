@@ -2,6 +2,7 @@ import React, { createContext, useState } from "react";
 import { auth } from "./../utils/firebase";
 import { signInWithPhoneNumber } from "firebase/auth";
 import axios from "axios";
+import { useEffect } from "react";
 
 export const userContext = createContext({
   codeSent: Boolean,
@@ -51,12 +52,12 @@ const UserContextProvider = (props) => {
     setToken(null);
     setUserId(null);
   };
-
   const autoLogin = () => {
     const expireTime = localStorage.getItem("expireTime");
     const newUserId = localStorage.getItem("userId");
     const newToken = localStorage.getItem("token");
-    const recentTime = new Date().getMilliseconds();
+    const recentTime = new Date().getTime();
+    console.log(recentTime, Number(expireTime));
     if (recentTime > expireTime) {
       logOut();
     } else {
@@ -64,7 +65,6 @@ const UserContextProvider = (props) => {
       setUserId(newUserId);
     }
   };
-
   const confirmCode = async (otp) => {
     try {
       const result = await window.confirmationResult.confirm(otp);

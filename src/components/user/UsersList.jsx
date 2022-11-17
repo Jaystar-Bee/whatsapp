@@ -43,7 +43,7 @@ const UsersList = () => {
     const getUser = async () => {
       //users
       const res = await axios.get(
-        `https://whatsapp-jaystar-default-rtdb.firebaseio.com/users.json`
+        `https://whatsapp-jaystar-default-rtdb.firebaseio.com/users.json?auth=${userCtx.token}`
       );
       let allUsers = [];
       for (const key in res.data) {
@@ -51,7 +51,7 @@ const UsersList = () => {
         if (key !== userCtx.userId) {
           //get last message
           const chats = await axios.get(
-            `https://whatsapp-jaystar-default-rtdb.firebaseio.com/chats/${userCtx.userId}/${key}/chats.json`
+            `https://whatsapp-jaystar-default-rtdb.firebaseio.com/chats/${userCtx.userId}/${key}/chats.json?auth=${userCtx.token}`
           );
           for (const key in chats.data) {
             const chat = {
